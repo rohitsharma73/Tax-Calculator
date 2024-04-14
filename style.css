@@ -1,0 +1,304 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: sans-serif;
+}
+form {
+    display: flex;
+    padding: 35px 15px 0px 15px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+select {
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 0.1rem;
+    border: 2px solid rgb(190, 188, 188);
+    border-radius: 3px;
+}
+
+/* css of individual id */
+#main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#form-section {
+    padding: 30px 30px;
+    border: 2px solid rgb(190, 188, 188);
+}
+
+#submit {
+    width: 100%;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    background-color: rgba(101, 89, 245, 255);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+
+/* individual marks css */
+.question-mark {
+    color: rgb(133, 133, 133);
+    border: solid 2px rgb(190, 188, 188);
+    border-radius: 100%;
+    padding: 2px;
+    margin: 0.1rem;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    line-height: 10px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.exclamation-mark {
+    visibility: hidden;
+    color: rgb(133, 133, 133);
+    position: absolute;
+    border: solid 2px rgb(190, 188, 188);
+    border-radius: 100%;
+    padding: 2px;
+    width: 18px;
+    height: 18px;
+    line-height: 10px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    aspect-ratio: 1;
+    right: 2.5%;
+    top: 22%;
+}
+
+.required-mark{
+    visibility: hidden;
+    color: rgb(248, 54, 54);
+    border: solid 2px rgb(248, 54, 54);
+    border-radius: 100%;
+    padding: 2px;
+    margin: 2px;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    line-height: 10px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+
+/* wrapper css */
+.wrapper {
+    max-width: 100%;
+    width: 400px;
+    position: relative;
+}
+
+.wrapper input{
+    width: 100%;
+    margin-bottom: 0.6rem;
+    border: 2px solid rgb(190, 188, 188);
+    border-radius: 3px;
+    padding: 0.7rem;
+}
+
+
+
+
+/* tooltip csss */
+
+/* css of question mark tooltip */
+.tooltip1 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip1 .tooltiptext1 {
+    visibility: hidden;
+    width: 7.7rem;
+    height: auto;
+    background-color: rgba(76, 93, 107, 255);
+    color: #fff;
+    font-size: 11px;
+    text-align: left;
+    line-height: 1.5;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-14%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip1 .tooltiptext1::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 15%;
+    margin-left: -7px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(76, 93, 107, 255) transparent transparent transparent;
+}
+
+.tooltip1:hover .tooltiptext1 {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* exclamationmark tooptip */
+.tooltip2 {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip2 .tooltiptext2 {
+    visibility: hidden;
+    width: 10rem;
+    height: auto;
+    background-color: rgba(76, 93, 107, 255);
+    color: #fff;
+    font-size: 11px;
+    text-align: left;
+    line-height: 1.5;
+    padding: 5px 8px;
+    border: none;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-14%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip2 .tooltiptext2::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 15%;
+    margin-left: -7px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(76, 93, 107, 255) transparent transparent transparent;
+}
+
+.tooltip2:hover .tooltiptext2 {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* tooltip 3 */
+
+.tooltip3 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip3 .tooltiptext3 {
+    visibility: hidden;
+    width: 11.2rem;
+    height: auto;
+    color: white;
+    background-color: rgba(76, 93, 107, 255);
+    font-size: 11px;
+    text-align: left;
+    line-height: 1.5;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-14%);
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.tooltip3 .tooltiptext3::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 15%;
+    margin-left: -7px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(76, 93, 107, 255) transparent transparent transparent;;
+}
+
+.tooltip3:hover .tooltiptext3 {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* modal */
+.modal {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  
+  .modal-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 30px 50px;
+    border: 2px solid rgb(190, 188, 188);
+    width: 600px;
+    max-width: 100%;
+    height: 65%;
+  }
+
+  #income-result{
+    font-size: 20px;
+    padding: 5px;
+    font-weight: bold;
+  }
+  
+  .close {
+    background-color: rgba(101, 89, 245, 255);
+    padding: 10px 25px;
+    margin: 2rem;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }

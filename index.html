@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <div id="main-section">
+        <div id="form-section">
+            <form action="#" id="form">
+                <div>
+                    <label for="gross-income">
+                        Enter gross annual income
+                        <span id="gross-span" class="tooltip1 question-mark">?
+                            <span class="tooltiptext1">
+                                Gross annual income is your total salary in a year before any deductions
+                            </span>
+                        </span></label>
+                    <div class="wrapper">
+                        <input type="text" id="gross-income" name="gross-income" placeholder="Enter gross annual income"
+                            class="number-validate" required>
+                        <span class="exclamation-mark tooltip2">!
+                            <span class="tooltiptext2">
+                                Please enter numbers only
+                            </span>
+                        </span>
+                    </div>
+                </div>
+
+
+                <div>
+                    <label for="extra-income">
+                        Enter extra income
+                        <span id="gross-span" class="tooltip1 question-mark">?
+                            <span class="tooltiptext1">
+                                Other sources of income except primary income.
+                            </span>
+                        </span></label>
+                    <div class="wrapper">
+                        <input type="text" id="extra-income" name="extra-income"
+                            placeholder="Enter extra income form other sources" required class="number-validate">
+                        <span class="exclamation-mark tooltip2">!
+                            <span class="tooltiptext2">
+                                Please enter numbers only
+                            </span>
+                        </span>
+                    </div>
+                </div>
+
+
+                <div>
+                    <label for="age-group">
+                        Enter age group
+                        <span id="gross-span" class="tooltip1 question-mark">?
+                            <span class="tooltiptext1">
+                                Select your age group
+                            </span>
+                        </span></label>
+                    <select name="age-group" id="age-group">
+                        <option value=""></option>
+                        <option value="<40">
+                            <40 </option>
+                        <option value="≥ 40 & < 60">≥ 40 & < 60</option>
+                        <option value="≥ 60">≥ 60</option>
+                    </select>
+                    <span class="required-mark tooltip3">!
+                        <span class="tooltiptext3">
+                            This input field is mandatory
+                        </span>
+                    </span>
+                </div>
+
+
+                <div>
+                    <label for="deduction">
+                        Enter total applicable deductions
+                        <span id="gross-span" class="tooltip1 question-mark">?
+                            <span class="tooltiptext1">
+                                Deduction in income tax reduces taxable income, acting like a tax discount
+                            </span>
+                        </span></label>
+                    <div class="wrapper">
+                        <input type="text" id="deduction" name="deduction" placeholder="Add total applicable deductions"
+                            class="number-validate" required>
+                        <span class="exclamation-mark tooltip2">!
+                            <span class="tooltiptext2">
+                                Please enter numbers only
+                            </span>
+                        </span>
+                    </div>
+                </div>
+
+
+                <input type="submit" id="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2>Your overall income will be</h2>
+            <p id="income-result"></p>
+            <p>after tax deductions</p>
+            <button class="close">Close</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
