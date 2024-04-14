@@ -61,7 +61,6 @@ closeModalButton.addEventListener('click', closeModal);
 form.addEventListener('submit', event => {
     event.preventDefault();
     
-    // Check if any exclamation mark is visible
     let exclamationMarkVisible = false;
     exclamationMarks.forEach(mark => {
         if (mark.style.visibility === 'visible') {
@@ -70,7 +69,6 @@ form.addEventListener('submit', event => {
     });
 
     if (exclamationMarkVisible) {
-        // Do not show modal if any exclamation mark is visible
         return;
     }
 
